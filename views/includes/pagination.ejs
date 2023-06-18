@@ -1,0 +1,7 @@
+<section class="page">
+    <a <% if (previous > 0) { %> href="?page=<%= previous %>" <% }%> class="<%= page === 1 ? 'disabled' : page === undefined ? 'disabled' : '' %>">Previous</a>
+    <% for (let i = 1; i <= last; i++) { %>
+    <a href="?page=<%= i %>" class="<%= i === page ? 'active' : '' %>"><%= i %></a>
+    <% } %>
+    <a <% if (nextPage <= last) { %> href="?page=<%= nextPage %>" <% }%> class="<%= nextPage > last ? 'disabled' : '' %>">Next</a>
+</section>
